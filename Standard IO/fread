@@ -1,0 +1,16 @@
+fread库函数用于从一个文件流里读取数据。数据从文件流stream读到由ptr指向的数据缓冲区里。
+fread和fwrite都是对数据记录进行操作，
+size参数指定每个数据记录的长度，
+计数器nitems给出要传输的记录个数。
+它的返回值是成功读到数据缓冲里的记录个数（而不是字节数）。
+当达到文件尾时，它的返回值可能会小于ntimes，甚至可以是零。
+
+该函数原型如下：
+#include <stdio.h>
+
+size_t fread(void *ptr, size_t size, size_t nitems, FILE *stream);
+
+对所有想缓冲区里写入数据的标准I/O函数来说，为数据分配空间和检查错误是程序员的责任。
+请参阅本章后面对ferror和feof函数的介绍。
+
+
