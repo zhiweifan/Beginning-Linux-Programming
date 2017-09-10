@@ -1,0 +1,15 @@
+fgetc函数从文件流里取出下一字节并把它定义为一个字符返回。
+当它到达文件为或出现错误时，它返回EOF。它必须通过ferror或feof来区分这两种情况。
+
+这些函数的原型如下：
+#include <stdio.h>
+
+int fgetc(FILE *stream);
+int getc(FILE *stream);
+int getchar();
+
+getc函数的作用和fegtc一样，但它有可能被实现为一个宏，
+如果是这样，stream参数就可能被计算不止一次，所以它不能由副作用（例如，它不能影响变量）。
+此外，你也不能保证能够使用getc的地址作为一个函数指针。
+
+getchar函数的作用相当于getc(stdin),它从标准输入里读取下一个字符。
