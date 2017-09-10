@@ -1,0 +1,12 @@
+fclose库函数关闭指定的文件流stream，使所有尚未写出的数据都写出。
+因为stdio库会对数据进行缓冲，所有使用fclose是很重要的。
+如果程序需要确保数据已经全部写出，就应该调用fclose函数。
+虽然当程序正常结束时，会自动对所有还打开的文件流调用fclose函数，
+但这样做你就没有机会检查fclose报告的错误了。
+
+该函数原型如下：
+#include <stdio.h>
+int fclose(FILE *stream);
+
+
+
