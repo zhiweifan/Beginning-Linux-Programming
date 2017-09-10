@@ -1,0 +1,7 @@
+fseek函数是与lseek系统调用对应的文件流函数。它在文件流里为下一次读写操作指定位置。
+offset和whence参数的含义和取值与前面的lseek系统调用完全一样。
+但lseek返回的是一个off_t数值，而fseek返回的是一个整数：0表示成功，-1表示失败并设置errno指出错误。
+
+该函数原型如下：
+#include <stdio.h>
+int fseek(FILE *stream, long int offset, int whence);
