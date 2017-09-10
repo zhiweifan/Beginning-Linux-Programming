@@ -1,0 +1,13 @@
+printf系列函数能够对各种不同类型的参数进行格式编排和输出。
+每个参数在输出流中的表示形式有格式参数format控制，它是一个包含需要输出的普通字符和称为转换控制符飞马的字符串。
+转换控制字符转换控制字符规定了其余的参数该如何以何种方式呗输出到何种地方。
+
+#include <stdio.h>
+
+int printf(const char *format, ...);
+int sprintf(char *s, const char *format, ...);
+int fprintf(FILE *stream, const char *format, ...);
+
+printf函数把自己的输出送到标准输出。
+fprintf函数把只记得输出送到一个指定的文件流。
+sprintf函数把只记得输出和一个结尾空字符写到作为参数传递过来的字符串s里。这个字符串必须足够容纳所有的输出数据。
