@@ -1,0 +1,11 @@
+fputc函数把一个字符写到一个输出文件流中。它返回写入的值，如果失败，则返回EOF。
+
+#include <stdio.h>
+
+int fputc(int c, FILE *stream);
+int putc(int c, FILE *stream);
+int putchar(int c);
+
+类似于fgetc和getc之间的关系，putc函数的作用也相当于fputc,但它可能被实现为一个宏。
+putchar函数相当于putc(c, stdout)，它把单个字符写到标准输出，注意，putchar和getchar都是把字符当做int类型而不是char类型来使用。
+这就允许文件尾(EOF)标识取值1，这是一个超出字符数字编码范围的值。
