@@ -1,0 +1,8 @@
+fwrite库函数与fread有相似的接口。它从指定的数据缓冲区里取出数据记录，并把它们写到输出流中。
+它的返回值是成功写入的记录个数。
+
+该函数原型：
+#include <stdio.h>
+size_t fwrite(const void *ptr, size_t size, size_t ntimes, FILE *stream);
+
+请注意：我们不推荐把fread和fwrite用于结构化数据。部分原因在于用发write写的文件在不同的计算机体系结构之间可能不具备可移植性。
